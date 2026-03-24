@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float r, h, slant_h, area, volume;
+    const float PI = 3.14159;
+
+    printf("Enter radius: ");
+    scanf("%f", &r);
+    printf("Enter height: ");
+    scanf("%f", &h);
+
+    slant_h = sqrt(r * r + h * h);
+    area = PI * r * (r + slant_h);
+    volume = (1.0/3.0) * PI * r * r * h;
+
+    printf("Surface Area: %.2f\n", area);
+    printf("Volume: %.2f\n", volume);
+
+    return 0;
+}
